@@ -1,5 +1,8 @@
 #ifndef __CONCURRENT_QUEUE_H__
 #define __CONCURRENT_QUEUE_H__
+#include <iostream>
+#include <memory>
+#include <utility>
 #include "../concurrentqueue.h"
 
 template<typename T>
@@ -13,7 +16,7 @@ public:
 
 	bool push( T& object)
 	{
-		this->enqueue(std::forward<T>(object));
+		this->enqueue(object);
 		return true;
 	}
 
