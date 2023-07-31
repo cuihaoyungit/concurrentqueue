@@ -11,7 +11,7 @@ public:
 	{
 	}
 
-	bool push(const T&& object)
+	bool push( T& object)
 	{
 		this->enqueue(std::forward<T>(object));
 		return true;
